@@ -1,0 +1,54 @@
+
+/* Font Family 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-modified {
+    max-width: 350px;
+}
+
+/*MODIFICACIONES DE LAS FUENTES EN CARDS*/
+.star {
+    font-size: 1rem;
+    color: #EB5757B8;
+}
+
+.super-host {
+    font-size: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;    
+}
+
+.description {
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;  
+}
+
+.rate {
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;  
+}
+
+.card-title {
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/*Modificaciones en la imagen*/
+.card-img-modified {
+    aspect-ratio: 4 / 3;
+}
+
+.image-modified {
+    object-fit: cover;
+    overflow: hidden;
+}
