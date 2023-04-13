@@ -39,14 +39,74 @@
       <img src="./img/logo.png" alt="">
     </div>
 
-    <article class="d-flex rounded-4">
-      <p class="p-3 m-0 cursor-text">Add location</p>
-      <p class="p-3 m-0 border-start border-end border-light-subtle user-select-none">Add guests</p>
+    <article class="d-flex rounded-4 shadow-sm">
+      <p class="p-3 m-0 text-body-tertiary cursor-text nav-text" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add location</p>
+      <p class="p-3 m-0 text-body-tertiary border-start border-end border-light-subtle user-select-none nav-text"
+        data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add
+        guests</p>
       <!-- Icono Search de google Icons -->
       <span class="material-symbols-outlined text-danger p-3 pointer">
         search
       </span>
+
+      <div class="offcanvas offcanvas-top h-75" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasTopLabel">Edit your search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column justify-content-between ">
+
+          <p class="row row-cols-1 row-cols-md-2">
+            <a class="btn btn-outline-secondary col" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+              aria-expanded="false" aria-controls="multiCollapseExample1">LOCATION</a>
+            <button class="btn btn-outline-secondary col" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2 mx-2">GUESTS</button>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla sapiente cumque totam iusto placeat molestiae?
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cupiditate nihil, officia libero consequatur magni?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-danger col-2">
+              <span class="material-symbols-outlined pointer">
+                search
+              </span><span> Search</span>
+            </button>
+          </div>
+          ...
+        </div>
+      </div>
     </article>
+
+    <!--<div class="search-box w-100 bg-dark-subtle position-absolute top-0">
+      <p class="d-flex justify-content-between">
+        <span>Edit your search</span>
+        <span class="material-symbols-outlined">
+          close
+        </span>
+      </p>
+      <div>
+        <p>LOCATION</p>
+        <p>Helsinki, Finland</p>
+        <p>GUESTS</p>
+        <p>Add guests</p>
+      </div>
+    </div>-->
+
   </header>
   <main>
     <div class="d-flex mt-5 justify-content-between">
@@ -61,7 +121,7 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="hosts">
 
         <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
-        
+
       </div>
     </section>
   </main>

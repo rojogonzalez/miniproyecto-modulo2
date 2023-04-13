@@ -9,6 +9,18 @@ font-family: 'Mulish', sans-serif;
     padding: 0px;
 }
 
+/*ESTILOS PARA SEARCH BOX*/
+
+.search-box {
+    z-index: 1;
+
+}
+
+.nav-text {
+    font-family: 'Mulish', sans-serif;
+}
+
+
 .card-modified {
     max-width: 350px;
 }
