@@ -15,10 +15,15 @@ font-family: 'Mulish', sans-serif;
     font-family: 'Mulish', sans-serif;
 }
 
+#locationsList {
+    list-style: none;
+    font-family: 'Mulish', sans-serif;
+}
 
 .card-modified {
     max-width: 350px;
 }
+
 
 /*MODIFICACIONES DE LAS FUENTES EN CARDS*/
 .star {

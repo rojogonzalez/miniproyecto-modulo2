@@ -59,9 +59,10 @@
 
         <div class="offcanvas-body d-flex flex-column justify-content-between ">
 
-          <p class="row row-cols-1 row-cols-md-2">
-            <a class="btn btn-outline-secondary col" data-bs-toggle="collapse" href="#multiCollapseExample1"
-              role="button" aria-expanded="false" aria-controls="multiCollapseExample1">LOCATION</a>
+          <p class="row row-cols-1 row-cols-md-2 btn-group" role="group">
+            <button class="btn btn-outline-secondary col" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample1" aria-expanded="false"
+              aria-controls="multiCollapseExample1 mx-2">LOCATION</button>
             <button class="btn btn-outline-secondary col" type="button" data-bs-toggle="collapse"
               data-bs-target="#multiCollapseExample2" aria-expanded="false"
               aria-controls="multiCollapseExample2 mx-2">GUESTS</button>
@@ -69,10 +70,9 @@
           <div class="row">
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <div class="card card-body border-0">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla sapiente cumque totam iusto placeat
-                  molestiae?
-                </div>
+                <ul class="card card-body border-0 text-light-emphasis" id="locationsList">
+                  
+                </ul>
               </div>
             </div>
             <div class="col">

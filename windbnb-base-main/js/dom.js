@@ -33,7 +33,30 @@ const newCard = (obj) => {
     return div;
 }
 
+const showLocations = (locations, where) => {
+
+    const list = $(where);
+
+    locations.forEach(element => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="material-symbols-outlined me-3 "> <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 1,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+        }
+        </style>
+        location_on
+        </span><span my-1>${element}<span>`;
+        li.className += "ms-4 my-2 ps-2";
+        list.appendChild(li);
+    });
+}
+
 export default{
     newCard,
-    $
+    $,
+    showLocations
 }
