@@ -37,7 +37,10 @@ font-family: 'Mulish', sans-serif;
 }
 
 .anadir-quitar:hover {
-    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(226, 226, 226, 0.253);
+    box-shadow: 2px 2px 20px rgba(226, 226, 226, 0.205);
+    border-color: rgba(226, 226, 226, 0.493) !important;
+    
 }
 
 
