@@ -5,6 +5,7 @@ con la manipulación del DOM en la aplicación
 
 const $ = (selector) => document.querySelector(selector);
 
+//Función para crear una card
 const newCard = (obj) => {
     const div = document.createElement('div');
     
@@ -33,30 +34,37 @@ const newCard = (obj) => {
     return div;
 }
 
-const showLocations = (locations, where) => {
+//Función para mostrar las cards
+const showCards = (arr) => {
+    hosts.innerHTML = '';
 
-    const list = $(where);
-
-    locations.forEach(element => {
-        const li = document.createElement('li');
-        li.innerHTML = `<span class="material-symbols-outlined me-3 "> <style>
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 1,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 48
-        }
-        </style>
-        location_on
-        </span><span my-1>${element}<span>`;
-        li.className += "ms-4 my-2 ps-2";
-        list.appendChild(li);
+    arr.forEach(element => {
+        const card = newCard(element);
+        hosts.appendChild(card);     
     });
 }
 
+//Función para mostrar las locaciones Ciudad, País disponibles
+const showLocations = (locations, where) => {
+
+    const locationsList = $(where);
+
+    locations.forEach(element => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="material-symbols-outlined me-3"> 
+        location_on
+        </span><span class="my-1">${element}<span>`;
+        li.className += `ms-4 my-2 ps-2 text-start locations rounded-pill }`;
+        locationsList.appendChild(li);
+        return li;
+    });
+}
+
+
+
 export default{
     newCard,
+    showCards,
     $,
-    showLocations
+    showLocations,
 }
