@@ -54,7 +54,7 @@ const showLocations = (locations, where) => {
         li.innerHTML = `<span class="material-symbols-outlined me-3"> 
         location_on
         </span><span class="my-1">${element}<span>`;
-        li.className += `ms-4 my-2 ps-2 text-start locations rounded-pill }`;
+        li.className += `ms-4 my-2 ps-2 text-start locations rounded-pill `;
         locationsList.appendChild(li);
         return li;
     });

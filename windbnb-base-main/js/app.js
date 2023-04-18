@@ -7,7 +7,7 @@ const locations = data.getLocations(datos);
 dom.showLocations(locations, '#locationsList')
 
 const locationsList = [...dom.$('#locationsList').children];
-
+const cards = dom.showCards(datos);
 
 let activeLocation = 0;
 
@@ -58,7 +58,7 @@ subtractChild.addEventListener('click', () => {
     addGuests.innerText = `${totalGuests == '0' ? 'Add guests' : totalGuests}`;
 })
 
-locationsList.forEach((loc, index) => {
+/*locationsList.forEach((loc, index) => {
 
     loc.addEventListener('click', () => {
         //if (loc.classList.contains('activeLocation')) return;
@@ -102,5 +102,63 @@ locationsList.forEach((loc, index) => {
         });
 
     })
+})*/
+
+let filteredByGuests =[];
+
+locationsList.forEach(loc => {
+    if (loc.maxGuests >= addGuests.innerText) filteredByGuests.push(loc);
+    console.log(addGuests.innerText);
+
+});
+
+
+
+let filteredByLoc = '';
+
+locationsList.forEach((loc, index) => {
+
+    loc.addEventListener('click', () => {
+        //if (loc.classList.contains('activeLocation')) return;
+        loc.classList.add('activeLocation');
+        locationsList[activeLocation].classList.remove('activeLocation');
+        activeLocation = index
+        let filtro = loc.children[1].textContent;
+
+        //Filtrando usando loc
+        filteredByLoc = filtro === 'Everywhere' ? datos : data.filtrar(datos, filtro);
+
+        /*let filteredByGuests = [];
+        filteredByLoc.forEach((loc2) => {
+
+            //if (loc2.maxGuests >= addGuests.innerText) filteredByGuests.push(loc2);
+            //console.log(filteredByGuests);
+            //return filteredByGuests;
+
+            //console.log(filteredByGuests);
+        });*/
+        let textBox = dom.$('#addLocation');
+        let textBox2 = dom.$('#addLocation2');
+        let textBox3 = dom.$('#staysIn');
+        let textBox4 = dom.$('#stays');
+        let textBox5 = dom.$('#textBox5');
+        textBox.textContent = `${filtro === "Everywhere" ? "Add location" : filtro}`;
+        textBox2.textContent = `${filtro === "Everywhere" ? "Add location" : filtro}`;
+        textBox3.textContent = `Stays in ${filtro === "Everywhere" ? "Everywhere" : filtro}`;
+        //textBox4.textContent = filteredByGuests.length;
+        //textBox5.textContent = `${totalGuests == '0' ? 'Add guests' : totalGuests}`
+
+    })
 })
+
+
+//dom.showCards(filteredByLoc);
+const searchLocation = dom.$('#searchLocation');
+searchLocation.addEventListener('click', () => {
+    //console.log(filteredByLoc);
+    dom.showCards(filteredByLoc);
+})
+
+
+
 
