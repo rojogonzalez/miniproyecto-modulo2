@@ -60,8 +60,6 @@ const showLocations = (locations, where) => {
     });
 }
 
-
-
 export default{
     newCard,
     showCards,
